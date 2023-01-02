@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--fuenteUcol);
+}
+html{
+    min-height:100%;
+    position: relative;
+}
+body {
+  font-family: var(--fuenteUcol);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  text-align: left;
+  margin-bottom: 1rem;
+
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url(//db.onlinewebfonts.com/c/3dd6e9888191722420f62dd54664bc94?family=Myriad+Pro)
+    format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+:root {
+  --colorUcol: #3c993d;
+  --fuenteUcol: "Open Sans";
+}
+header {
+  background: var(--colorUcol);
+  font-family: var(--fuenteUcol);
+  padding: 0.65rem 0;
+  color: #fff;
+  display: flex !important;
+  align-items: center !important;
+}
+header>img{
+    margin-left: 1rem;
+}
+#tituloSiceuc{
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.2rem;
+    background-color: gainsboro;
+}
+.container{
+    display: flex;
+    height: 10em;
+}
+aside#menu{
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    width: 25%;
+}
+section{
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    width: 50%;
+    align-items: center;
+}
+
+aside#avisos{
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    width: 25%;
+}
+.card{
+    margin-bottom: 0.8rem;
+}
+p{
+    font-size: small;
+    text-align: justify;
+    padding: 0.2rem;
+    margin: 0.4rem;
+}
+.list-group-item{
+    font-size: small;
+    cursor: pointer;
+}
+.list-group-item:hover{
+    background-color: #f2f2f2;
+    color: var(--colorUcol);
+}
+a{
+    color: var(--colorUcol);
+    text-decoration: none !important;
+}
+.group {
+    position: relative;
+    margin-bottom: 20px;
+}
+input {
+    font-size: 15px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 70%;
+    margin-left:5px;
+    border: none;
+    border-bottom: 1px solid #757575;
+}
+
+input:focus {
+    outline: none;
+}
+/* LABEL ======================================= */
+label {
+    color: #999;
+    font-size: 15px;
+    font-weight: 700;
+    position: absolute;
+    pointer-events: none;
+    text-align: center;
+    margin-left: -10.9rem;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+input:focus~label,
+input:valid~label {
+    top: -20px;
+    font-size: 14px;
+    color:var(--colorUcol)
+}
+
+/* BOTTOM BARS ================================= */
+.bar {
+    position: relative;
+    display: block;
+    margin-left: 4.5rem;
+    margin-top: 0.1rem;
+    width: 120%;
+}
+
+.bar:before,
+.bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #8b9eeb;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 10%;
+}
+
+.bar:after {
+    right: 49%;
+}
+
+/* active state */
+input:focus~.bar:before,
+input:focus~.bar:after {
+    width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* active state */
+input:focus~.highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+.btn-ucol{
+    background-color: var(--colorUcol);
+    color: #fff;
+    border: 1px solid var(--colorUcol);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    width: 15rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-ucol:hover{
+    background-color: #fff;
+    color: var(--colorUcol);
+    border: 1px solid var(--colorUcol);
+}
+img{
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0
+}
+footer{
+    background-color: var(--colorUcol);
+    position: absolute;
+    width: 100%;
+    bottom: -100%;
+    color: #fff;
+    font-size: 0.8rem;
+}

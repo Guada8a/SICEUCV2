@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--fuenteUcol);
+}
+html{
+    min-height:100%;
+    position: relative;
+}
+body {
+  font-family: var(--fuenteUcol);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url(//db.onlinewebfonts.com/c/3dd6e9888191722420f62dd54664bc94?family=Myriad+Pro)
+    format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+:root {
+  --colorUcol: #3c993d;
+  --fuenteUcol: "Open Sans";
+}
+
+/* TITULOS */
+h3{
+    font-size: 1.3rem;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    padding: 0.2rem;
+    background-color: var(--colorUcol);
+    color: white;
+    border-radius: 2rem;
+}
+#aCerrar>a{
+    color:red;
+}
+#aCerrar>a:hover{
+    background-color: gainsboro;
+    color: red;
+}
+#menu_Volver{
+    cursor: pointer;
+}
+/* IMAGENES */
+#sectionPhoto>img{
+    width: 60% !important;
+    height: 60% !important;
+    object-fit: cover !important;
+}
+#escuela>img{
+    width: 65% !important;
+    height: 65% !important;
+    object-fit: cover !important;
+}
+#acreditacion>img{
+    width: 45% !important;
+    height: 45% !important;
+    object-fit: contain !important;
+}
+/*TABLAS*/
+table>thead>tr>th{
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--colorUcol);
+    text-align: center;
+}
+table>tbody>tr>td{
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: black;
+}
+table>tbody>tr>td:not(.titulo_tabla){
+    text-align: center;
+}
+table#infoAlumno>tbody>tr>td:not(.titulo_tabla){
+    text-align: left;
+}
+.celdaBlack{
+    font-weight: 700;
+}
+table>tfoot>tr>td.promedio{
+    font-weight: 700;
+    background-color: var(--colorUcol);
+    color: white;
+}
+/* CONTENEDORES */
+#sectionPhoto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+#sectionPhoto>.row>h6{
+    margin-top: 0.5rem;
+    font-size: small;
+}
+#sectionInfo>.row>h6{
+    font-size: small;
+}
+#sectionInfo{
+    margin-left: -10%;
+    width: 30rem;
+}
+#info{
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    width: 70%;
+}
+.container-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+section{
+    width: 100%;
+}
+#detalleHoras{
+    display: flex;
+    align-items: center;
+}
+#horas{
+    margin-right: 1.5rem;
+}
+#horas>.row>.col>.row>h4{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    background-color: var(--colorUcol);
+    border-radius: 50%;
+    margin-left: 1.7rem;
+    width: 2.5rem;
+    padding: 0.2rem;
+}
+.alert-info {
+    background-color: #edf8ff;
+    border-color: #c9f3ff;
+    color: #4d90b3;
+}
+.alert {
+    padding: 0 35px 0 14px;
+    margin-bottom: 18px;
+    text-shadow: 0 1px 0 rgb(255 255 255 / 50%);
+    background-color: #ffedec;
+    border: 1px solid #ffdde1;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: #908825;
+}
+footer{
+    background-color: var(--colorUcol);
+    position: absolute;
+    width: 100%;
+    bottom: -240%;
+    color: #fff;
+    font-size: 0.8rem;
+}
