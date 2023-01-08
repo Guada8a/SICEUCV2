@@ -60,15 +60,44 @@
                 <h3>Información escolar</h3>
                 <div class="row">
                     <div class="col" align="center" id="escuela">
-                        <img src="https://lh3.googleusercontent.com/p/AF1QipM6OfEMmfiTUzTs33w0-q_Z_lMg8pVqJW3Slf91=s680-w680-h510" jsaction="load:trigger.aMp9Zb" class="m7eMIc aQg20b pFuEAd" alt="Foto" >
-                        <h6>Escuela: Facultad de Telemática</h6>
-                    </div>
-                    <div class="col">
-                        <h6><b>Semestre:</b> 3</h6>
-                        <h6><b>Grupo:</b> G</h6>
-                        <h6><b>Plan:</b> K802</h6>
-                        <h6><b>Área:</b></h6>
-                        <h6><b>Carrera:</b> Ingeniero de Software</h6>
+                        </div>
+                        <div class="table-responsive">
+                        <table class="table table-sm">
+                            <tr>
+                                <td rowspan="4" width="40%">
+                                    <img src="https://lh3.googleusercontent.com/p/AF1QipM6OfEMmfiTUzTs33w0-q_Z_lMg8pVqJW3Slf91=s680-w680-h510" jsaction="load:trigger.aMp9Zb" class="m7eMIc aQg20b pFuEAd" alt="Foto" >
+                                </td>
+                                <td>
+                                    <h6><p class="text-muted">Semestre:</p> 3</h6>
+                                </td>
+                                <td>
+                                    <h6><p class="text-muted">Grupo:</p> G</h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h6><p class="text-muted">Plan:</p> K802</h6>
+                                </td>
+                                <td>
+                                    <h6><p class="text-muted">Área:</p> <p class="text-muted">SIN DATOS</p></h6>
+                                </td>
+                            </tr>
+                            <tr>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h6><p class="text-muted">Escuela: </p>Facultad de Telemática</h6>
+                                </td>
+                                <td>
+                                    <h6><p class="text-muted">Carrera:</p> Ingenier&iacute;a de Software</h6>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </section>
+            <style>
+                h6{
+                    font-size:0.8rem;
+                }
+            </style>

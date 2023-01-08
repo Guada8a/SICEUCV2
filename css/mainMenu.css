@@ -36,7 +36,7 @@ h3{
     padding: 0.2rem;
     background-color: var(--colorUcol);
     color: white;
-    border-radius: 2rem;
+    border-radius: 0.5rem;
 }
 #aCerrar>a{
     color:red;
@@ -165,4 +165,20 @@ footer{
     bottom: -240%;
     color: #fff;
     font-size: 0.8rem;
+}
+.accordion-button:not(.collapsed) {
+    color: var(--colorUcol);
+    background-color: var(--bs-accordion-active-bg);
+}
+.bg-success {
+    background-color: var(--colorUcol) !important;
+    text-align: center;
+    width: 2.5rem;
+    border-radius: 50%;
+}
+.bg-success>h4{
+    margin-top: 0.4rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
 }

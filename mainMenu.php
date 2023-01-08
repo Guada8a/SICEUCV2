@@ -96,37 +96,61 @@ $keys = array("usuario","password");
             <section>
                 <h3>Situación Acreditación Deportiva</h3>
                 <div class="container-row">
-                    <div class="row" id="detalleHoras">
-                        <div class="col" align="center" id="acreditacion">
-                            <img src="https://static.vecteezy.com/system/resources/previews/014/746/160/original/dumbbell-icon-design-free-vector.jpg" jsaction="load:trigger.aMp9Zb" class="m7eMIc aQg20b pFuEAd" alt="Foto" >
-                            <h6 style="margin-top:1.1rem"><i>Fisicoculturismo</i></h6>
-                        </div>
-                        <div class="col" align="center" id="horas">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="row"><h6>1<sup>er</sup> Parcial</h6></div>
-                                    <div class="row"><h4>10</h4></div>
-                                </div>
-                                <div class="col">
-                                    <div class="row"><h6>2<sup>da</sup> Parcial</h6></div>
-                                    <div class="row"><h4>10</h4></div>
-                                </div>
-                                <div class="col">
-                                    <div class="row"><h6>3<sup>era</sup> Parcial</h6></div>
-                                    <div class="row"><h4>12</h4></div>
-                                </div>
-                                <div class="col">
-                                    <div class="row"><h6>Total de horas</h6></div>
-                                    <div class="row"><h4>32</h4></div>
-                                </div>
-                            </div>
-                            <div class="row" style="margin-top:1.1rem;">
-                                <div class="col"><div class="row"><h6>Ordinario</h6><h5> 0</h5></div></div>
-                                <div class="col"><div class="row"><h6>Extra</h6><h5> 0</h5></div></div>
-                                <div class="col"><div class="row"><h6>Eventos</h6><h5> 0</h5></div></div>
-                            </div>
-                        </div>
-                    </div>
+                    <table class="table">
+                        <tr>
+                            <td rowspan="3">
+                                <p class="text-muted">Acreditación</p>
+                                <span class="badge rounded-pill bg-light text-dark">
+                                    <h6 style="margin-top:1.1rem"><i>Fisicoculturismo</i></h6>
+                                </span>
+                            </td>
+                            <td>
+                                <div class="row"><h6>1<sup>er</sup> Parcial</h6></div>
+                            </td>
+                            <td>
+                                <div class="row"><h6>2<sup>da</sup> Parcial</h6></div>
+                            </td>
+                            <td>
+                                <div class="row"><h6>3<sup>er</sup> Parcial</h6></div>
+                            </td>
+                            <td>
+                                <div class="row"><h6>Total</h6></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="badge rounded-pill bg-success"><h4>10</h4></span>
+                            </td>
+                            <td>
+                                <span class="badge rounded-pill bg-success"><h4>10</h4></span>
+                            </td>
+                            <td>
+                                <span class="badge rounded-pill bg-success"><h4>12</h4></span>
+                            </td>
+                            <td>
+                                <span class="badge rounded-pill bg-success"><h4>32</h4></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h6>Ordinario</h6><h5> 0</h5>
+                            </td>
+                            <td>
+                                <h6>Extra</h6><h5> 0</h5>
+                            </td>
+                            <td>
+                                <h6>Extra</h6><h5> 0</h5>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="4">
+                                <h6>Culturales</h6><h5> 0</h5>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
                 </div>
                 <div class="row">
                     <img src="https://siceuc.ucol.mx/img/imagendeportes.jpg">
