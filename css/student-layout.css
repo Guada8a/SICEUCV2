@@ -1,0 +1,215 @@
+.body .main-header {
+    left: 0;
+    position: sticky;
+    top: 0px;
+    z-index: 9;
+}
+
+.body .main-container {
+    align-items: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.body .main-container-centered {
+    align-items: flex-start;
+    box-sizing: border-box;
+    column-gap: 30px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    max-width: 1360px;
+    width: 100%;
+}
+
+.body .main-profile {
+    left: 40px;
+    top: 100px;
+    position: sticky;
+}
+
+.body .main-content-data {
+    flex: 1;
+    position: relative;
+    width: 100%;
+}
+
+    .body .main-content-data .main-menu {
+        display: flex;
+        justify-content: flex-end;
+        margin: 10px 0 30px;
+    }
+
+.responsive-menu-sm {
+    display: none;
+}
+
+.student-container {
+    margin: 30px 0;
+}
+
+.student-profile {
+    width: 300px;
+}
+
+    .student-profile .schoolar-data ul {
+        border-bottom: 1px solid var(--neutral-300);
+        font-size: 12px;
+        list-style: none;
+        margin: 20px;
+        padding-bottom: 20px;
+        text-align: right;
+    }
+
+    .student-profile .resume {
+        margin: 20px 0;
+    }
+
+        .student-profile .resume .total {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+            .student-profile .resume .total .item {
+                align-items: center;
+                background-color: var(--primary);
+                border-radius: 3px 15px 3px 15px;
+                color: var(--neutral-000);
+                display: flex;
+                font-size: 16px;
+                justify-content: center;
+                letter-spacing: 1.4px;
+                padding: 10px;
+            }
+
+                .student-profile .resume .total .item span {
+                    margin: 0 5px;
+                }
+
+                .student-profile .resume .total .item .count {
+                    font-size: 28px
+                }
+
+            .student-profile .resume .total .text {
+                color: var(--neutral-500);
+                font-size: 11px;
+            }
+
+        .student-profile .resume .item.total--danger {
+            background-color: var(--semantic-error-900);
+        }
+
+        .student-profile .resume .item.total--warning {
+            background-color: var(--semantic-warning-900);
+        }
+
+        .student-profile .resume .item.total--info {
+            background-color: var(--semantic-info-900);
+        }
+
+        .student-profile .resume .item.total--success {
+            background-color: var(--primary);
+        }
+
+
+        .student-profile .resume .resume__item {
+            align-items: center;
+            color: var(--neutral-700);
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+            .student-profile .resume .resume__item .name {
+                color: var(--primary);
+            }
+
+.main-menu__item ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+    .main-menu__item ul li {
+        cursor: pointer;
+        position: relative;
+    }
+
+    .main-menu__item ul li .notify {
+        align-items: center;
+        border-radius: 50%;
+        display: flex;
+        font-size: 10px;
+        height: 20px;
+        justify-content: center;
+        padding: 0;
+        position: absolute;
+        top: -15px;
+        right: 0;
+        width: 20px;
+    }
+
+        .main-menu__item ul li:hover a {
+            background-color: var(--semantic-info-000);
+            border-radius: 3px;
+            color: var(--semantic-info-900);
+        }
+
+        .main-menu__item ul li a {
+            color: var(--neutral-900);
+            height: 100%;
+            padding: 7px 15px;
+            width: 100%;
+        }
+
+            .main-menu__item ul li a:hover {
+                text-decoration: none;
+            }
+
+            .main-menu__item ul li a:focus {
+                text-decoration: none;
+            }
+
+
+@media only screen and (max-width: 1010px) {
+    .body .main-container-centered {
+        flex-direction: column;
+    }
+
+    .body .main-profile {
+        left: 0;
+        margin: 40px 0;
+        position: relative;
+        top: 0;
+        width: 100%;
+    }
+
+        .body .main-profile .student-profile {
+            width: 100%;
+        }
+
+    .responsive-menu-lg {
+        display: none;
+    }
+
+    .responsive-menu-sm {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .main-menu__item ul {
+        flex-wrap: wrap;
+        row-gap: 10px;
+        justify-content: flex-end;
+    }
+}

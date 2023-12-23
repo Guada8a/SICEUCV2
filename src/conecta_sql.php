@@ -1,1 +1,0 @@
-Aquí están las sql

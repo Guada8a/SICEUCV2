@@ -31,6 +31,7 @@ body {
 	--neutral-800: #1a1c2b;
 	--semantic-error-000: #ffcccd;
 	--semantic-error-900: #d95f61;
+	--semantic-error-901: #9f2e30;
 	--neutral-000: #ffffff;
 	--semantic-info-000: #b4bceb;
 	--semantic-info-900: #6777d1;
@@ -98,9 +99,9 @@ body {
 	}
 }
 @media screen and (max-width: 600px) {
-    .main-header__container .module-title .short-subtitle {
-        display: block;
-    }
+	.main-header__container .module-title .short-subtitle {
+		display: block;
+	}
 }
 .main-header__container .module-title .subtitle {
 	font-size: 12px;
@@ -240,7 +241,7 @@ h2,
 	border-radius: 0;
 	box-shadow: none;
 	color: var(--neutral-600);
-	font-size: 1rem;
+	font-size: 1.6rem;
 	outline: none;
 	-webkit-box-shadow: none;
 }
@@ -268,7 +269,7 @@ h2,
 	width: 100%;
 	height: 34px;
 	padding: 6px 12px;
-	font-size: 5px;
+	font-size: 15px;
 	line-height: 1.428571429;
 	color: #555555;
 	vertical-align: middle;
@@ -371,7 +372,7 @@ input {
 .login-form__help span {
 	color: var(--neutral-500);
 	cursor: pointer;
-	font-size: 0.9rem;
+	font-size: 1.3rem;
 }
 .login-form__help span:hover {
 	color: var(--primary);
@@ -379,3 +380,113 @@ input {
 .login-form__help span:last-of-type {
 	text-align: right;
 }
+.nugget .profile-picture {
+	/* Que la imagen se ponga dentro */
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+}
+.custom-card {
+	margin-bottom: 30px;
+}
+.custom-card__content {
+	display: flex;
+	align-items: center; /* Centra verticalmente los elementos */
+}
+aside.bg-profile {
+	flex: 1; /* Ocupa todo el espacio disponible */
+	max-width: 100px; /* Ajusta el ancho del aside según sea necesario */
+	margin-right: 20px;
+}
+aside img {
+	/* Hacer circulo perfecto */
+	border-radius: 50%;
+}
+section {
+	flex: 2; /* Ocupa el doble de espacio que el aside */
+}
+/* Estilos adicionales según sea necesario */
+.profile-picture {
+	max-width: 100%;
+	height: auto;
+	border-radius: 50%;
+}
+.menu-session {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+	list-style: none;
+}
+.menu-session ul {
+	list-style: none;
+}
+.menu-session li {
+	padding: 5px 10px;
+	border-radius: 5px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.menu-session li:nth-last-child(1) {
+	/* Dar formato de boton */
+	border: 1px solid #ccc;
+	background-color: var(--semantic-error-900);
+	a {
+		color: white;
+	}
+	border-radius: 5px;
+	padding: 5px 10px;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+.menu-session li a {
+	color: var(--neutral-800);
+	text-decoration: none;
+}
+.menu-session li:hover:not(li:nth-last-child(1)), li.active {
+	a {
+		color: white;
+		text-decoration: none;
+		background-color: var(--primary);
+	}
+	color: white;
+	text-decoration: none;
+	background-color: var(--primary);
+}
+.menu-session li:nth-last-child(1):hover {
+	color: white;
+	text-decoration: none;
+	background-color: var(--semantic-error-901);
+}
+
+.main-container-centered {
+	margin-top: 100px !important;
+}
+.resume1 {
+	display: flex;
+	align-items: center;
+    width: 100% !important;
+    justify-content: center;
+}
+
+.resume__item {
+	flex: 0 0 auto; /* Deja que los elementos tengan su propio tamaño y no crezcan */
+	margin-right: 10px; /* Agrega margen entre los elementos (ajusta según sea necesario) */
+	padding: 10px; /* Añade relleno para mejorar la apariencia */
+}
+.resume__item .name{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+.card-acts{
+    align-items: center;
+    text-align: center;
+    width: 100% !important;
+
+}
+
