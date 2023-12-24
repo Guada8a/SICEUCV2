@@ -44,216 +44,76 @@
 	<body>
 		<!-- Encabezado -->
 		<header class="main-header" id="header-container"></header>
-
-		<script>
-			// Cargar el encabezado con jQuery
-			$(document).ready(function () {
-				$("#header-container").load("src/components/header.html");
-			});
-
-			// Tu código JavaScript existente
-		</script>
 		<div class="body">
 			<div class="main-container">
 				<div class="main-container-centered">
-					<div class="main-profile">
-						<aside class="student-profile">
-							<div class="custom-card">
-								<div class="user-data">
-									<div class="nugget">
-                                        <img src="https://siceuc.ucol.mx/fotos/xybnktaqga2klcwmyliul0ckdfqgbovi1fcjslgnusy8welwipbkbt6vjfnermcpn9eynifmbpwj4dmfqrveuko7tckynimqdrfnmssbwbnq.jpg" alt="Foto de perfil" class="profile-picture" />
-                                    </div>
-									<div class="name text-ellipsis">
-										OCHOA CARRILLO JOSE GUADALUPE
-									</div>
-								</div>
-								<div class="schoolar-data">
-									<ul>
-                                        <li>20186947</li>
-										<li>FACULTAD DE TELEMATICA</li>
-										<li>5° sem.</li>
-									</ul>
-								</div>
-								<div class="data-blocks">
-									<div class="responsive-menu-lg">
-                                        <nav class="main-menu">
-                                            <div class="menu-session">
-                                                <ul>
-                                                    <li class="active">
-                                                        <a href="/cultural/Alumno/Panel">Inicio</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/cultural/Alumno/Panel">Evaluaciones</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/cultural/Agenda/Eventos">Práctica Profesional</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/cultural/Alumno/Boletos">Servicio Social Universitario</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/cultural/Ayuda/Alumno">Servicio Constitucional</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/cultural/Alumno/Avisos">Actividades Culturales y deportivas</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/cultural/Alumno/CerrarSesion">Salir</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </nav>
-                                    </div>
-								</div>
-							</div>
-							<div class="modal fade" id="blocked-account-modal" tabindex="-1" role="dialog" aria-labelledby="blocked-account-modal">
-								<div class="modal-dialog" role="document">
-									<div class="modal-content">
-										<button
-											type="button"
-											class="close-modal"
-											data-dismiss="modal"
-											aria-label="Close"
-										>
-											<span aria-hidden="true">×</span>
-										</button>
-										<h3 class="subtitle">Tu cuenta ha sido bloqueada</h3>
-										<p class="help-text">
-											Tu cuenta ha sido bloqueada debido a que se detectaron
-											<span class="highlight"
-												>varios eventos a los cuáles no has asistido</span
-											>. Para mayor información acude a tu
-											<span class="highlight">Plantel</span> con el responsable
-											de Culturales y Deportivas
-										</p>
-									</div>
-								</div>
-							</div>
-						</aside>
-					</div>
 					<main class="main-content-data">
-						<!-- <div class="responsive-menu-lg">
-							<nav class="main-menu">
-								<div class="main-menu__item">
-									<ul>
-										<li>
-											<a href="/cultural/Alumno/Panel">Inicio</a>
-										</li>
-										<li>
-											<a href="/cultural/Agenda/Eventos">Agenda</a>
-										</li>
-										<li>
-											<a href="/cultural/Alumno/Boletos">Mis Eventos</a>
-										</li>
-										<li>
-											<a href="/cultural/Ayuda/Alumno">FAQ's</a>
-										</li>
-										<li>
-											<a href="/cultural/Alumno/Avisos">Notificaciones</a>
-										</li>
-										<li>
-											<a href="/cultural/Alumno/CerrarSesion">Salir</a>
-										</li>
-									</ul>
-								</div>
-							</nav>
-						</div> -->
-
 						<div class="student-container">
 							<div class="attendances">
-								<h4 class="subtitle">Datos Personales</h4>
-								<div class="custom-card">
-                                    <div class="custom-card__content">
-                                        <aside class="bg-profile">
-                                            <img src="https://siceuc.ucol.mx/fotos/xybnktaqga2klcwmyliul0ckdfqgbovi1fcjslgnusy8welwipbkbt6vjfnermcpn9eynifmbpwj4dmfqrveuko7tckynimqdrfnmssbwbnq.jpg" alt="Foto de perfil" class="profile-picture" />
-                                        </aside>
-                                        <section>
+                                <h4 class="subtitle">Datos Académicos</h4>
+                                <div class="custom-card">
+                                    <div class="custom-card__content dataAcademic">
+                                        <div class="col1">
+                                            <div class="custom-card__content__item bgPlantel">
+                                                <img src="https://portal.ucol.mx/content/micrositios/212/image/telematica-900x300.jpg" alt="" srcset="">
+                                            </div>
+                                        </div>
+                                        <div class="col2">
                                             <div class="custom-card__content__item">
                                                 <div class="custom-card__content__item__label">
-                                                    <b>Nombre:</b> <span>OCHOA CARRILLO JOSE GUADALUPE</span>
+                                                    <b class="name">Plantel:</b> <span>FACULTAD DE TELEMATICA</span>
                                                 </div>
                                             </div>
                                             <div class="custom-card__content__item">
                                                 <div class="custom-card__content__item__label">
-                                                    <b>Correo:</b> <span><a href="mailto:jochoa10@ucol.mx">jochoa10@ucol.mx</a></span>
+                                                    <b class="name">Carrera:</b> <span>INGENIERIA DE SOFTWARE</span>
                                                 </div>
                                             </div> 
                                             <div class="custom-card__content__item">
                                                 <div class="custom-card__content__item__label">
-                                                    <b>Cuenta:</b> <span>20186947</span>
+                                                    <b class="name">Plan:</b> <span>K802</span> <b class="name">Generación:</b> <span>2016</span>
                                                 </div>
                                             </div>
                                             <div class="custom-card__content__item">
                                                 <div class="custom-card__content__item__label">
-                                                    <b>CURP:</b> <span>OOCG030528HCMCRDA4</span>
+                                                    <b class="name">Semestre:</b> <span>5</span> <b class="name">Grupo:</b> <span>G</span>
                                                 </div>
                                             </div>
-                                            <div class="custom-card__content__item">
-                                                <div class="custom-card__content__item__label">
-                                                    <b>Saldo en monedero electrónico:</b> <span>$0.00</span>
-                                                </div>
-                                            </div>
-                                            <div class="custom-card__content__item">
-                                                <div class="custom-card__content__item__label">
-                                                    <b>NSS:</b> <span>10170380744</span> <b>UMF:</b> <span>19</span>
-                                                </div>
-                                            </div>
-                                            <div class="custom-card__content__item">
-                                                <div class="custom-card__content__item__label">
-                                                    <p>
-                                                        Te recomendamos que antes de visitar la clínica del IMSS que te corresponde, imprimas tu <a href="https://serviciosdigitales.imss.gob.mx/gestionAsegurados-web-externo/vigencia" target="_blank">vigencia de derechos</a>
-                                                    </p>
-                                                    <p>
-                                                        Puedes revisar la guía del estudiante del IMSS <a href="https://www.gob.mx/cms/uploads/attachment/file/152983/Estudiantes.pdf" target="_blank">aquí</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </section>
-                                    </div>
-                                    <div class="data-blocks">
-                                        <div class="custom-alert custom-info-alert" style="margin-bottom: 1rem;">
-                                            <p>
-                                                Puedes consultar tu resultado del examen de diagnóstico de inglés <a href="">aquí</a>
-                                            </p>
-                                        </div>
-                                        <div class="custom-alert custom-danger-alert">
-                                            <p>
-                                                Si requieres factura sobre tus pagos referenciados debes solicitarla al secretario administrativo de tu plantel dentro del mismo mes en que realizaste el pago
-                                            </p>
                                         </div>
                                     </div>
                                 </div>
-                                <h4 class="subtitle">Datos Académicos</h4>
+                                <h4 class="subtitle">Avisos</h4>
                                 <div class="custom-card">
-                                    <div class="custom-card__content">
-                                        <section>
-                                            <div class="custom-card__content__item">
-                                                <div class="custom-card__content__item__label">
-                                                    <b>Plantel:</b> <span>FACULTAD DE TELEMATICA</span>
-                                                </div>
-                                            </div>
-                                            <div class="custom-card__content__item">
-                                                <div class="custom-card__content__item__label">
-                                                    <b>Carrera:</b> <span>INGENIERIA DE SOFTWARE</span>
-                                                </div>
-                                            </div> 
-                                            <div class="custom-card__content__item">
-                                                <div class="custom-card__content__item__label">
-                                                    <b>Plan:</b> <span>K802</span> <b>Generación:</b> <span>2016</span>
-                                                </div>
-                                            </div>
-                                            <div class="custom-card__content__item">
-                                                <div class="custom-card__content__item__label">
-                                                    <b>Semestre:</b> <span>5</span> <b>Grupo:</b> <span>G</span>
-                                                </div>
-                                            </div>
-                                        </section>
+                                    <div class="data-blocks">
+                                        <div class="custom-alert custom-success-alert" style="margin-bottom: 1rem">
+                                            <p><a href="">Consulta la oferta de Talleres Culturales</a></p>
+                                        </div>
+                                        <div class="custom-alert custom-info-alert">
+                                            <p><a href="">Consulta la oferta deportiva como materia electiva o programa de acreditación 32 horas, según tu plan académico</a></p>
+                                        </div>
                                     </div>
+                                    <div class="custom-card__content__item links">
+                                        <h5 class="subtitle-secondary-variant"><a href="">IMPRIME EL FORMATO DE REINSCRIPCIÓN</a></h5>
+                                        <hr>
+                                    </div>
+                                    <div class="custom-card__content__item links">
+                                        <h5>VERIFICA A LA ACTIVIDAD QUE ESTÁS INSCRITO <a href="" class="subtitle-secondary-variant">AQUÍ</a></h5>
+                                        <hr>
+                                    </div>
+                                    <div class="custom-card__content__item links">
+                                        <h5><b>CONSULTA TUS CALIFICACIONES FINALES EN </b><a href="" class="subtitle-secondary-variant">ANÁLISIS</a></h5>
+                                        <hr>
+                                    </div>
+                                    
                                 </div>
                                 <h4 class="subtitle">Situación de Acreditación Deportiva</h4>
                                 <div class="custom-card">
                                     <div class="custom-card__content">
                                         <section>
+                                            <div class="custom-card__content__item">
+                                                <h5 class="subtitle-primary-variant">DEPORTE: <b class="name-variant">Liga Universitaria</b></h5>
+                                            </div>
+                                            <hr>
                                             <div class="custom-card__content__item student-profile card-acts">
                                                 <div class="resume">
                                                     <div class="total">
@@ -297,10 +157,10 @@
                                             </div>
                                         </section>
                                     </div>
-							</div>
-                            <div class="banner section">
-								
-							</div>
+                                    <div class="banner section">
+                                        <img src="https://siceuc.ucol.mx/img/imagendeportes.jpg" alt="información general">
+                                    </div>
+                                </div>
 						</div>
 
 						<script src="/cultural/Assets/js/views/alumno/panel.js"></script>
@@ -321,6 +181,7 @@
 			</div>
 		</div>
 		<script src="./src/js/login.js"></script>
+        <script src="./src/js/inicio.js"></script>
 		<!-- Pie de página -->
 		<div id="footer-container"></div>
 	</body>

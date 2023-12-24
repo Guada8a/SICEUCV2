@@ -1,6 +1,8 @@
 :root {
     --primary: #5F5EA3;
+    --primary-variant: #3F3E6B;
     --secondary: #CCDB94;
+    --secondary-900: #B3C479;
     --neutral-500: #AAAAAA;
     --neutral-200: #fafafa;
     --neutral-300: #eaeaea;
@@ -10,10 +12,14 @@
     --semantic-error-000: #FFCCCD;
     --semantic-error-900: #D95F61;
     --neutral-000: #FFFFFF;
-    --semantic-info-000: #B4BCEB;
-    --semantic-info-900: #6777D1;
+    --semantic-info-000: #cdd0e1;
+    --semantic-info-900: #445dee;
     --semantic-warning-900: #D9AC43;
     --semantic-warning-000: #FFEFCC;
+    --semantic-success-900: #5DBA5D;
+    --semantic-success-000: #DFF0D8;
+    --semantic-dark-000: #1A1C2B;
+    --semantic-dark-900: #465D72;
 }
 
 body {
@@ -264,6 +270,31 @@ body {
     margin: 0 0 20px 0;
     text-align: center;
 }
+.subtitle-secondary-variant{
+    color: var(--primary);
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0 0 20px 0;
+    text-align: center !important;
+}
+.subtitle-secondary-variant a{
+    color: var(--secondary);
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+.subtitle-secondary-variant a:hover{
+    color: var(--secondary-900);
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
 /**************************************************/
 input.input-validation-error, div.input-validation-error .select2-choice, textarea.input-validation-error {
     border-color: var(--semantic-error-900) !important;
@@ -275,7 +306,7 @@ input.input-validation-error, div.input-validation-error .select2-choice, textar
     background-color: var(--semantic-error-000);
     border-radius: 3px;
     color: var(--semantic-error-900);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     padding: 15px 25px;
     text-align: center;
@@ -292,6 +323,10 @@ input.input-validation-error, div.input-validation-error .select2-choice, textar
     color: var(--semantic-info-900);
 }
 
+.custom-success-alert {
+    background-color: var(--semantic-success-000);
+    color: var(--semantic-success-900);
+}
 /***************************************************/
 .banner {
     align-items: center;
@@ -376,4 +411,10 @@ input.input-validation-error, div.input-validation-error .select2-choice, textar
 
 .margin-y-5 {
     margin: 15px 0;
+}
+
+/**************************************************/
+hr{
+    width: 90%;
+    margin: 0 auto;
 }

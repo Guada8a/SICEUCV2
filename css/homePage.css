@@ -402,13 +402,38 @@ aside.bg-profile {
 	max-width: 100px; /* Ajusta el ancho del aside según sea necesario */
 	margin-right: 20px;
 }
-aside img {
+aside img:not(.dataAcademic aside img) {
 	/* Hacer circulo perfecto */
 	border-radius: 50%;
 }
-section {
-	flex: 2; /* Ocupa el doble de espacio que el aside */
+section:not(.dataAcademic section) {
+    flex: 2; /* Ocupa el doble de espacio que el aside */
 }
+.col1{
+    flex: 1; /* Ocupa el doble de espacio que el aside */
+    height: auto;
+}
+.col2{
+    flex: 2; /* Ocupa el doble de espacio que el aside */
+    width: 50%;
+    height: auto;
+}
+.bgPlantel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-right: 40px;
+}
+.bgPlantel img{
+    background-color: #ccdb94;
+    /* Hacer que lo siguiente se ponga en la siguiente linea */
+    margin-bottom: 20px;
+    /* Poner al 100% de cover */
+    width: 100%;
+    border-radius: 10px;
+}
+
 /* Estilos adicionales según sea necesario */
 .profile-picture {
 	max-width: 100%;
@@ -478,10 +503,15 @@ section {
 	margin-right: 10px; /* Agrega margen entre los elementos (ajusta según sea necesario) */
 	padding: 10px; /* Añade relleno para mejorar la apariencia */
 }
-.resume__item .name{
+.resume__item .name, .name{
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--primary);
+}
+.name-variant{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--neutral-800);
 }
 .card-acts{
     align-items: center;
@@ -490,3 +520,29 @@ section {
 
 }
 
+.banner.section img{
+    max-width: 100%;
+
+}
+.banner {
+    align-items: center;
+    background-color: var(--neutral-200) !important;
+    border-radius: 10px;
+    box-sizing: border-box;
+    column-gap: 20px;
+    display: flex;
+    justify-content: space-around;
+    min-height: 400px;
+    position: relative;
+    width: 100%;
+  }
+
+.custom-card .data-blocks{
+    margin-bottom: 10px;
+}
+.links{
+    width: 100%;
+}
+.links h5{
+    text-align: center;
+}
