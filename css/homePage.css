@@ -2,7 +2,6 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: var(--fuenteUcol);
 }
 *,
 *:before,
@@ -12,15 +11,14 @@
 	box-sizing: border-box;
 }
 body {
-	font-family: var(--fuenteUcol);
-	font-size: 14px;
+	font-size: 13px;
 	line-height: 1.5;
 	text-align: left;
 	margin-bottom: 1rem;
 }
 :root {
 	--colorUcol: #ccdb94;
-	--fuenteUcol: "Poppins", sans-serif;
+	--fuenteUcol: 'Poppins', sans-serif !important;
 	--primary: #5f5ea3;
 	--secondary: #ccdb94;
 	--neutral-500: #aaaaaa;
@@ -37,6 +35,15 @@ body {
 	--semantic-info-900: #6777d1;
 	--semantic-warning-900: #d9ac43;
 	--semantic-warning-000: #ffefcc;
+}
+.input-error {
+    border-bottom: 1px solid var(--semantic-error-900) !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+.field-validation-valid {
+    color: var(--semantic-error-900) !important;
+    font-style: italic;
 }
 /* Fuente NUEVA */
 .main-header {
@@ -245,25 +252,7 @@ h2,
 	outline: none;
 	-webkit-box-shadow: none;
 }
-.form input:focus {
-	border-bottom: 1px solid var(--primary);
-	box-shadow: none;
-	-webkit-box-shadow: none;
-}
-/* validaciones */
-/* input.form-control:focus, textarea.form-control:focus, div.input-validation-error .select2-choice:focus {
-    border-color: #953b39;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
-  } */
-.form-control:focus {
-	border-color: #66afe9;
-	outline: 0;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
-		0 0 8px rgba(102, 175, 233, 0.6);
-	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
-		0 0 8px rgba(102, 175, 233, 0.6);
-}
+
 .form-control {
 	display: block;
 	width: 100%;
@@ -362,23 +351,6 @@ input {
 .btn:hover,
 .btn:focus {
 	text-decoration: none;
-}
-.login-form__help {
-	display: flex;
-	height: 40px;
-	justify-content: space-between;
-	width: 100%;
-}
-.login-form__help span {
-	color: var(--neutral-500);
-	cursor: pointer;
-	font-size: 1.3rem;
-}
-.login-form__help span:hover {
-	color: var(--primary);
-}
-.login-form__help span:last-of-type {
-	text-align: right;
 }
 .nugget .profile-picture {
 	/* Que la imagen se ponga dentro */
