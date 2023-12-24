@@ -14,6 +14,7 @@ $(document).ready(function () {
     let active = $(".active");
     active.removeClass("active");
     let path = window.location.pathname;
+    path = path.substring(path.lastIndexOf("/"));
     switch (path) {
         case "/inicio.html":
             
