@@ -14,7 +14,11 @@ $(document).ready(function () {
     let active = $(".active");
     active.removeClass("active");
     let path = window.location.pathname;
-    path = path.substring(path.lastIndexOf("/"));
+    //Si empieza con /SICEUCV2, quitarlo
+    if(path.indexOf("/SICEUCV2") == 0){
+        path = path.replace("/SICEUCV2", "");
+    }
+    console.log(path);
     switch (path) {
         case "/inicio.html":
             
