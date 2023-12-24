@@ -40,7 +40,7 @@
 					<b>NSS:</b> <span>10170380744</span> <b>UMF:</b> <span>19</span>
 				</div>
 			</div>
-			<div class="custom-card__content__item">
+			<div class="custom-card__content__item principal d-none">
 				<div class="custom-card__content__item__label">
 					<p>
 						Te recomendamos que antes de visitar la clínica del IMSS que te
@@ -63,7 +63,18 @@
 			</div>
 		</section>
 	</div>
-	<div class="data-blocks">
+    <script>
+        $(document).ready(function () {
+            let path = window.location.pathname;
+            let page = path.split("/").pop();
+            console.log(page);
+            if(page == "inicio.html"){
+                $(".data-blocks").removeClass("d-none");
+                $(".principal").removeClass("d-none");
+            }
+        });
+    </script>
+	<div class="data-blocks d-none">
 		<div class="custom-alert custom-success-alert" style="margin-bottom: 1rem">
 			<p>
 				Puedes consultar tu resultado del examen de diagnóstico de inglés

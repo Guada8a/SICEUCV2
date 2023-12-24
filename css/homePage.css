@@ -407,31 +407,31 @@ aside img:not(.dataAcademic aside img) {
 	border-radius: 50%;
 }
 section:not(.dataAcademic section) {
-    flex: 2; /* Ocupa el doble de espacio que el aside */
+	flex: 2; /* Ocupa el doble de espacio que el aside */
 }
-.col1{
-    flex: 1; /* Ocupa el doble de espacio que el aside */
-    height: auto;
+.col1 {
+	flex: 1; /* Ocupa el doble de espacio que el aside */
+	height: auto;
 }
-.col2{
-    flex: 2; /* Ocupa el doble de espacio que el aside */
-    width: 50%;
-    height: auto;
+.col2 {
+	flex: 2; /* Ocupa el doble de espacio que el aside */
+	width: 50%;
+	height: auto;
 }
-.bgPlantel{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    margin-right: 40px;
+.bgPlantel {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+	margin-right: 40px;
 }
-.bgPlantel img{
-    background-color: #ccdb94;
-    /* Hacer que lo siguiente se ponga en la siguiente linea */
-    margin-bottom: 20px;
-    /* Poner al 100% de cover */
-    width: 100%;
-    border-radius: 10px;
+.bgPlantel img {
+	background-color: #ccdb94;
+	/* Hacer que lo siguiente se ponga en la siguiente linea */
+	margin-bottom: 20px;
+	/* Poner al 100% de cover */
+	width: 100%;
+	border-radius: 10px;
 }
 
 /* Estilos adicionales según sea necesario */
@@ -450,11 +450,15 @@ section:not(.dataAcademic section) {
 .menu-session ul {
 	list-style: none;
 }
+
 .menu-session li {
 	padding: 5px 10px;
 	border-radius: 5px;
 	margin-right: 10px;
 	margin-bottom: 10px;
+}
+.menu-session li a {
+	width: 100%;
 }
 .menu-session li:nth-last-child(1) {
 	/* Dar formato de boton */
@@ -472,7 +476,8 @@ section:not(.dataAcademic section) {
 	color: var(--neutral-800);
 	text-decoration: none;
 }
-.menu-session li:hover:not(li:nth-last-child(1)), li.active {
+.menu-session li:hover:not(li:nth-last-child(1)),
+li.active {
 	a {
 		color: white;
 		text-decoration: none;
@@ -494,55 +499,81 @@ section:not(.dataAcademic section) {
 .resume1 {
 	display: flex;
 	align-items: center;
-    width: 100% !important;
-    justify-content: center;
+	width: 100% !important;
+	justify-content: center;
 }
-
+@media screen and (max-width: 1024px) {
+    .resume1 {
+        flex-direction: column;
+    }
+    
+}
 .resume__item {
 	flex: 0 0 auto; /* Deja que los elementos tengan su propio tamaño y no crezcan */
 	margin-right: 10px; /* Agrega margen entre los elementos (ajusta según sea necesario) */
 	padding: 10px; /* Añade relleno para mejorar la apariencia */
 }
-.resume__item .name, .name{
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--primary);
+.resume__item .name,
+.name {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: var(--primary);
 }
-.name-variant{
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--neutral-800);
+.name-variant {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: var(--neutral-800);
 }
-.card-acts{
-    align-items: center;
-    text-align: center;
-    width: 100% !important;
-
+.card-acts {
+	align-items: center;
+	text-align: center;
+	width: 100% !important;
 }
 
-.banner.section img{
-    max-width: 100%;
-
+.banner.section img {
+	max-width: 100%;
 }
 .banner {
-    align-items: center;
-    background-color: var(--neutral-200) !important;
-    border-radius: 10px;
-    box-sizing: border-box;
-    column-gap: 20px;
-    display: flex;
-    justify-content: space-around;
-    min-height: 400px;
-    position: relative;
-    width: 100%;
-  }
+	align-items: center;
+	background-color: var(--neutral-200) !important;
+	border-radius: 10px;
+	box-sizing: border-box;
+	column-gap: 20px;
+	display: flex;
+	justify-content: space-around;
+	min-height: 400px;
+	position: relative;
+	width: 100%;
+}
 
-.custom-card .data-blocks{
-    margin-bottom: 10px;
+.custom-card .data-blocks {
+	margin-bottom: 10px;
 }
-.links{
-    width: 100%;
+.links {
+	width: 100%;
 }
-.links h5{
-    text-align: center;
+.links h5 {
+	text-align: center;
+}
+.d-none {
+	display: none;
+}
+
+/* Crear table striped */
+.table tbody tr:nth-of-type(odd) {
+	background-color: rgba(0, 0, 0, 0.05);
+}
+tr{
+    height: 9%;
+    font-size: small;
+}
+td{
+    height: auto;
+}
+tr:nth-child(1) {
+	background-color: var(--primary) !important;
+	color: var(--neutral-000);
+}
+tr td:not(:nth-child(1)) {
+	text-align: center;
 }
