@@ -1,0 +1,134 @@
+{
+    "1": {
+        "materias": [
+            "Fundamentos de Programación",
+            "Ética para Ingeniería",
+            "Fundamentos de Redes de Datos",
+            "Matemáticas Básicas",
+            "Sistemas Operativos",
+            "Introducción a la Ingeniería de Software",
+            "Ingles I",
+            "Electiva I",
+            "Servicio Social Universitario I"
+        ],
+        "calificaciones": [
+            "9.8",
+            "9.8",
+            "9.8",
+            "9.8",
+            "9.8",
+            "9.8",
+            "9.8",
+            "AC",
+            "AC"
+        ],
+        "examenes": [
+            "Ordinario",
+            "Ordinario",
+            "Ordinario",
+            "Ordinario",
+            "Ordinario",
+            "Ordinario",
+            "Ordinario",
+            "Ordinario",
+            "Ordinario"
+        ],
+        "promedio": 9.8
+    },
+    "2": {
+        "materias": [
+            "Programación Orientada a Objetos",
+            "Sistemas Digitales",
+            "Servicios de Internet",
+            "Métodos Numéricos",
+            "Desarrollo Emprendedor",
+            "Ciclo de Vida del Desarrollo de Software",
+            "Ingles II",
+            "Electiva II",
+            "Servicio Social Universitario II"
+        ],
+        "calificaciones": [
+            "10",
+            "10",
+            "10",
+            "9.7",
+            "9.2",
+            "8.7",
+            "8.7",
+            "AC",
+            "AC"
+        ],
+        "examenes": [
+            "Ordinario",
+            "Ordinario",
+            "Ordinario",
+            "Ordinario",
+            "Ordinario",
+            "Ordinario",
+            "Ordinario",
+            "Ordinario",
+            "Ordinario"
+        ],
+        "promedio": 9.47
+    },
+    "3": {
+        "materias": [
+            "Estructura de Datos",
+            "Estructuras de Computadoras",
+            "Legislación y Derecho Informático",
+            "Matemáticas Discretas",
+            "Metodologías Ágiles",
+            "Bases de Datos",
+            "Inglés III",
+            "Electiva III",
+            "Servicio Social Universitario III"
+        ],
+        "calificaciones": [
+            9.5, 10, 9.8, 8.6, 9.4, 9, 9.8, "AC", "AC"
+        ],
+        "examenes": [
+            "Ordinario", "Ordinario", "Ordinario", "Ordinario", "Ordinario", "Ordinario", "Ordinario", "Ordinario", "Ordinario"
+        ],
+        "promedio": 9.44
+    },
+    "4": {
+        "materias": [
+            "Formulación de Proyectos de Software",
+            "Programación para Web",
+            "Sistemas Embebidos",
+            "Probabilidad Discreta y Análisis Estadístico",
+            "Tecnologías de Redes Emergentes",
+            "Inglés IV",
+            "Electiva IV",
+            "Servicio Social Universitario IV",
+            "Optativa I: Procesamiento de Imágenes"
+        ],
+        "calificaciones": [
+            9.5, 10, 10, 9.8, 9.1, 10, "AC", "AC", 9.4
+        ],
+        "examenes": [
+            "Ordinario", "Ordinario", "Ordinario", "Ordinario", "Ordinario", "Ordinario", "Ordinario", "Ordinario", "Ordinario"
+        ],
+        "promedio": 9.69
+    },
+    "5": {
+        "materias": [
+            "Dirección de Proyectos de Software",
+            "Investigación de Operaciones y Simulación",
+            "Gestión de las Tecnologías de la Información",
+            "Interacción Humano-Computadora",
+            "Programación de Móviles",
+            "Inglés V",
+            "Electiva V",
+            "Servicio Social Universitario V",
+            "Optativa II: Programación de Videojuegos"
+        ],
+        "calificaciones": [
+            9, 9.6, 9.7, 9.6, 10, 8.7, "AC", "AC", 10
+        ],
+        "examenes": [
+            "Ordinario", "Ordinario", "Ordinario", "Ordinario", "Ordinario", "Ordinario", "Ordinario", "Ordinario", "Ordinario"
+        ],
+        "promedio": 9.51
+    }
+}

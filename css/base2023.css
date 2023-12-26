@@ -194,7 +194,22 @@ body {
 }
 
 /**************************************************/
-
+.badge-success {
+    background-color: var(--secondary-900);
+    color: var(--neutral-000);
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0 0 20px 0;
+    text-align: center;
+    border-radius: 5px;
+    width: 50%;
+    align-self: center;
+    padding: 10px;
+    margin: auto;
+}
+/**************************************************/
 .bg-transparent {
     background-color: transparent;
 }

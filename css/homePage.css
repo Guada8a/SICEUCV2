@@ -46,6 +46,15 @@ body {
     font-style: italic;
 }
 /* Fuente NUEVA */
+h4.title {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--neutral-800);
+    margin-bottom: 1rem;
+}
 .main-header {
 	display: flex;
 	height: 82px;
