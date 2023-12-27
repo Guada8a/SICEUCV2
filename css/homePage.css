@@ -18,7 +18,7 @@ body {
 }
 :root {
 	--colorUcol: #ccdb94;
-	--fuenteUcol: 'Poppins', sans-serif !important;
+	--fuenteUcol: "Poppins", sans-serif !important;
 	--primary: #5f5ea3;
 	--secondary: #ccdb94;
 	--neutral-500: #aaaaaa;
@@ -37,23 +37,23 @@ body {
 	--semantic-warning-000: #ffefcc;
 }
 .input-error {
-    border-bottom: 1px solid var(--semantic-error-900) !important;
-    box-shadow: none !important;
-    -webkit-box-shadow: none !important;
+	border-bottom: 1px solid var(--semantic-error-900) !important;
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
 }
 .field-validation-valid {
-    color: var(--semantic-error-900) !important;
-    font-style: italic;
+	color: var(--semantic-error-900) !important;
+	font-style: italic;
 }
 /* Fuente NUEVA */
 h4.title {
-    font-family: 'Poppins', sans-serif !important;
-    font-size: 1.8rem;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-    color: var(--neutral-800);
-    margin-bottom: 1rem;
+	font-family: "Poppins", sans-serif !important;
+	font-size: 1.8rem;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--neutral-800);
+	margin-bottom: 1rem;
 }
 .main-header {
 	display: flex;
@@ -408,9 +408,6 @@ section:not(.dataAcademic section) {
 }
 .bgPlantel img {
 	background-color: #ccdb94;
-	/* Hacer que lo siguiente se ponga en la siguiente linea */
-	margin-bottom: 20px;
-	/* Poner al 100% de cover */
 	width: 100%;
 	border-radius: 10px;
 }
@@ -473,7 +470,59 @@ li.active {
 	text-decoration: none;
 	background-color: var(--semantic-error-901);
 }
-
+.responsive-menu-sm > .main-menu {
+	display: none;
+}
+.responsive-menu-sm {
+	bottom: 71px;
+	display: flex;
+	position: fixed;
+	z-index: 1000;
+	right: 0;
+	background-color: var(--neutral-300);
+	border-radius: 5px;
+	padding: 5px;
+	/* Sombras */
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+.main-menu .menu-session{
+    opacity: 0.9;
+}
+.menu-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--semantic-dark-900);
+	color: var(--neutral-000);
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	/* Que sea flotante */
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 100;
+}
+.menu-button.menu-open {
+	width: 100px;
+	height: 50px;
+	border-radius: 40px;
+	/* Agrega otros estilos según sea necesario */
+}
+#menuLbl {
+    display: none;
+}
+/* Click
+border-radius: 40px;
+    width: 100px;
+    height: 50px;
+ */
+.menu-button__icon {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+/*************/
 .main-container-centered {
 	margin-top: 100px !important;
 }
@@ -484,10 +533,9 @@ li.active {
 	justify-content: center;
 }
 @media screen and (max-width: 1024px) {
-    .resume1 {
-        flex-direction: column;
-    }
-    
+	.resume1 {
+		flex-direction: column;
+	}
 }
 .resume__item {
 	flex: 0 0 auto; /* Deja que los elementos tengan su propio tamaño y no crezcan */
@@ -544,12 +592,83 @@ li.active {
 .table tbody tr:nth-of-type(odd) {
 	background-color: rgba(0, 0, 0, 0.05);
 }
-tr{
-    height: 9%;
-    font-size: small;
+/* Responsive table */
+@media screen and (max-width: 518px) {
+	.module-title {
+		display: none !important;
+	}
+	.table-responsive {
+		display: block;
+		width: 100%;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+	}
+	.eval td,
+	td {
+		font-size: xx-small;
+	}
+	/* Centrar texto verticalmente */
+	td,
+	th {
+		vertical-align: middle !important;
+	}
+	.badge-success {
+		background-color: #5cb85c;
+		font-size: xx-small !important;
+		width: 100% !important;
+	}
+	.banner {
+		min-height: auto !important;
+		padding: 10px !important;
+	}
+	.dataAcademic {
+		/* Hacia abajo */
+		flex-direction: column !important;
+	}
+	.bgPlantel {
+		margin-right: 0px !important;
+	}
+	.col2 {
+		width: 100% !important;
+	}
+	/* Poner el padre de bg-profile hacia abajo */
+	#data-profile {
+		flex-direction: column !important;
+	}
+	#data-profile aside {
+		margin-bottom: 10px !important;
+	}
+	/**/
+	.student-profile .schoolar-data ul {
+		border-bottom: 0 !important;
+		font-size: 12px;
+		list-style: none;
+		margin-right: 20px !important;
+		padding-bottom: 0 !important;
+		text-align: right;
+	}
+	.menu-session,
+	.menu-session ul {
+		margin-bottom: 0 !important;
+	}
+	.menu-session li:nth-last-child(1) {
+		margin-bottom: 0 !important;
+	}
+	.menu-session li {
+		margin-right: 5px !important;
+	}
 }
-td{
-    height: auto;
+tr {
+	height: 9%;
+	font-size: small;
+}
+td {
+	height: auto;
+}
+td,
+th {
+	vertical-align: middle !important;
 }
 tr:nth-child(1) {
 	background-color: var(--primary) !important;
@@ -558,3 +677,34 @@ tr:nth-child(1) {
 tr td:not(:nth-child(1)) {
 	text-align: center;
 }
+/* Crear menu flotante
+.menu-float {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0 0 20px 20px;
+    z-index: 100;
+}
+.menu-float ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu-float li {
+    margin-bottom: 10px;
+}
+.menu-float li a {
+    display: block;
+    padding: 10px;
+    background-color: var(--primary);
+    color: var(--neutral-000);
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+.menu-float li a:hover {
+    background-color: var(--secondary);
+}
+.menu-float li a i {
+    margin-right: 10px;
+} */

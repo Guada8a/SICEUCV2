@@ -10,21 +10,21 @@ $(document).ready(function () {
     menu.each(function (index, element) {
         menuArray.push(element);
     });
-    
+
     let active = $(".active");
     active.removeClass("active");
     let path = window.location.pathname;
     //Si empieza con /SICEUCV2, quitarlo
-    if(path.indexOf("/SICEUCV2") == 0){
+    if (path.indexOf("/SICEUCV2") == 0) {
         path = path.replace("/SICEUCV2", "");
     }
     console.log(path);
     switch (path) {
         case "/inicio.html":
-            
+
             menuArray.forEach(element => {
                 //elemnent.children[0].textContent
-                if(element.children[0].textContent == "Inicio"){
+                if (element.children[0].textContent == "Inicio") {
                     $(element).addClass("active");
                 }
             });
@@ -33,7 +33,7 @@ $(document).ready(function () {
         case "/analisis.html":
             menuArray.forEach(element => {
                 //elemnent.children[0].textContent
-                if(element.children[0].textContent == "Evaluaciones"){
+                if (element.children[0].textContent == "Evaluaciones") {
                     $(element).addClass("active");
                 }
             });
@@ -41,4 +41,16 @@ $(document).ready(function () {
         default:
             break;
     }
+    //Click en el botón de menú
+    $(".menu-button").click(function () {
+        // Toggle de la clase 'menu-open'
+        $('.main-menu').toggle({
+            effect: "scale",
+            percent: 100
+        }, 500);
+        $("#menuLbl").toggle();
+        // Cambiar la apariencia del botón
+        $(this).toggleClass("menu-open");
+    });
+
 });
