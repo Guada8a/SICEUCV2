@@ -43,14 +43,48 @@ $(document).ready(function () {
     }
     //Click en el botón de menú
     $(".menu-button").click(function () {
-        // Toggle de la clase 'menu-open'
-        $('.main-menu').toggle({
-            effect: "scale",
-            percent: 100
-        }, 500);
-        $("#menuLbl").toggle();
-        // Cambiar la apariencia del botón
-        $(this).toggleClass("menu-open");
+        //Si el menú esta visible, ocultarlo
+        if ($(".main-menu").is(":visible")) {
+            $(".main-menu").hide({
+                effect: "scale",
+                percent: 100
+            }, 500);
+            $(this).removeClass("menu-open");
+            if($("#menuLbl").css("display") != "none"){
+                $("#menuLbl").css("display", "none");
+            }
+        } else {
+            //Si no, mostrarlo
+            $(".main-menu").show({
+                effect: "scale",
+                percent: 100
+            }, 500);
+            $(this).addClass("menu-open");
+            if($("#menuLbl").css("display") != "block"){
+                $("#menuLbl").css("display", "block");
+            }
+        }
     });
-
+    //Si da click fuera del menú, cerrarlo
+    $(document).mouseup(function (e) {
+        //Solo si la ventana tiene un ancho menor a 768px
+        if ($(window).width() > 808) {
+            return;
+        }else{
+            var container = $(".main-menu");
+            //Si ya esta oculto, no hacer nada
+            if (!container.is(e.target) && container.has(e.target).length === 0) {
+                container.hide({
+                    effect: "scale",
+                    percent: 100
+                }, 500);
+                if($(".menu-button").hasClass("menu-open")){
+                    $(".menu-button").removeClass("menu-open");
+                }
+                if($("#menuLbl").css("display") != "none"){
+                    $("#menuLbl").css("display", "none");
+                }
+            }
+        }
+    });
 });

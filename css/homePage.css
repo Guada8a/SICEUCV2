@@ -496,28 +496,25 @@ li.active {
 	background-color: var(--semantic-dark-900);
 	color: var(--neutral-000);
 	border-radius: 50%;
-	width: 50px;
-	height: 50px;
+	width: 60px;
+	height: 60px;
 	/* Que sea flotante */
 	position: fixed;
 	bottom: 20px;
 	right: 20px;
 	z-index: 100;
+    font-size: medium;
 }
 .menu-button.menu-open {
 	width: 100px;
-	height: 50px;
+	height: 60px;
 	border-radius: 40px;
 	/* Agrega otros estilos según sea necesario */
 }
 #menuLbl {
     display: none;
+    margin-left: 4px;
 }
-/* Click
-border-radius: 40px;
-    width: 100px;
-    height: 50px;
- */
 .menu-button__icon {
 	font-size: 1.5rem;
 	font-weight: 600;
@@ -592,10 +589,34 @@ border-radius: 40px;
 .table tbody tr:nth-of-type(odd) {
 	background-color: rgba(0, 0, 0, 0.05);
 }
+@media screen and (max-width: 1024px) {
+    .responsive-menu-sm > nav > .custom-card > .user-data > div:nth-child(2){
+        font-size: small;
+    }
+    .responsive-menu-sm > nav > .custom-card > .schoolar-data > ul{
+        list-style: none;
+        text-align: right;
+        font-size: smaller;
+    }
+    .main-profile{
+        display: none   !important;
+    }
+}
 /* Responsive table */
 @media screen and (max-width: 518px) {
-	.module-title {
-		display: none !important;
+    .main-profile{
+        display: none   !important;
+    }
+    .responsive-menu-sm > nav > .custom-card > .user-data > div:nth-child(2){
+        font-size: small;
+    }
+    .responsive-menu-sm > nav > .custom-card > .schoolar-data > ul{
+        list-style: none;
+        text-align: right;
+        font-size: smaller;
+    }
+	.short-subtitle {
+		font-size: small !important;
 	}
 	.table-responsive {
 		display: block;
@@ -608,7 +629,6 @@ border-radius: 40px;
 	td {
 		font-size: xx-small;
 	}
-	/* Centrar texto verticalmente */
 	td,
 	th {
 		vertical-align: middle !important;
@@ -623,7 +643,6 @@ border-radius: 40px;
 		padding: 10px !important;
 	}
 	.dataAcademic {
-		/* Hacia abajo */
 		flex-direction: column !important;
 	}
 	.bgPlantel {
