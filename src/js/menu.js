@@ -18,7 +18,6 @@ $(document).ready(function () {
     if (path.indexOf("/SICEUCV2") == 0) {
         path = path.replace("/SICEUCV2", "");
     }
-    console.log(path);
     switch (path) {
         case "/inicio.html":
 

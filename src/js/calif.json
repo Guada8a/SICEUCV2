@@ -130,5 +130,25 @@
             "Ordinario", "Ordinario", "Ordinario", "Ordinario", "Ordinario", "Ordinario", "Ordinario", "Ordinario", "Ordinario"
         ],
         "promedio": 9.51
+    },
+    "6":{
+        "materias":[
+            "Diseño y Evaluación de Interfaces de Usuario",
+            "Control de Calidad de Software",
+            "Proyecto de Inovación",
+            "Desarrollo de Software Seguro",
+            "Optativa III: Ingeniería Financiera",
+            "Optativa IV: Accesibilidad de Contenidos",
+            "Inglés VI",
+            "Electiva VI",
+            "Servicio Social Universitario VI"
+        ],
+        "calificaciones":[
+            "NA","NA","NA","NA","NA","NA","NA","NA","NA"
+        ],
+        "examenes":[
+            "Ordinario","Ordinario","Ordinario","Ordinario","Ordinario","Ordinario","Ordinario","Ordinario","Ordinario"
+        ],
+        "promedio":0
     }
 }

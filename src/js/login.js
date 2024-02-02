@@ -14,7 +14,6 @@ $(document).ready(function() {
             al_cuenta: $('#al_cuenta').val(),
             al_clave: $('#al_clave').val()
         };
-        console.log(formData);
         if(formData.al_cuenta == "" || formData.al_clave == ""){
             if(formData.al_cuenta == ""){
                 $('#al_cuenta').addClass("input-error");

@@ -145,10 +145,49 @@ img {
 	border: 0;
 }
 .main-content {
-	display: flex;
-	justify-content: center;
-	height: calc(100vh - 100px);
-	padding-top: 100px;
+	display: grid !important;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 100%;
+    grid-template-areas: "main-profile main-menu";
+}
+
+.main-content > aside {
+    grid-area: main-menu;
+}
+.main-content > section {
+    grid-area: main-profile;
+}
+.avisos{
+    margin: 30px;
+}
+.avisos > .custom-card{
+    padding: 20px;
+    margin: 20px;
+}
+
+/* ---------------------- responsividad en main-content --------------------- */
+@media screen and (max-width: 1024px) {
+    .main-content {
+        display: flex !important;
+        flex-direction: column;
+    }
+    .main-content > aside {
+        order: 2;
+    }
+    .main-content > section {
+        order: 1;
+    }
+    .avisos{
+        margin: 30px;
+        /* Alinear al centro todo */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .avisos > .custom-card{
+        width: 50%;
+    }
 }
 #tituloSiceuc {
 	font-size: 1.3rem;
@@ -439,11 +478,9 @@ section:not(.dataAcademic section) {
 	width: 100%;
 }
 .menu-session li:nth-last-child(1) {
-	/* Dar formato de boton */
-	border: 1px solid #ccc;
-	background-color: var(--semantic-error-900);
 	a {
-		color: white;
+		color: var(--semantic-error-900);
+        font-weight: 600;
 	}
 	border-radius: 5px;
 	padding: 5px 10px;
@@ -466,7 +503,11 @@ li.active {
 	background-color: var(--primary);
 }
 .menu-session li:nth-last-child(1):hover {
-	color: white;
+    a {
+		color: white;
+		text-decoration: none;
+		background-color: var(--semantic-error-901);
+	}
 	text-decoration: none;
 	background-color: var(--semantic-error-901);
 }
