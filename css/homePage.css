@@ -166,10 +166,13 @@ img {
 }
 
 /* ---------------------- responsividad en main-content --------------------- */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 472px) {
     .main-content {
         display: flex !important;
         flex-direction: column;
+    }
+    .container {
+        margin-top:200%;
     }
     .main-content > aside {
         order: 2;
@@ -177,6 +180,7 @@ img {
     .main-content > section {
         order: 1;
     }
+    
     .avisos{
         margin: 30px;
         /* Alinear al centro todo */
@@ -188,6 +192,61 @@ img {
     .avisos > .custom-card{
         width: 50%;
     }
+}
+@media screen and (min-width: 473px) and (max-width: 520px) {
+    .main-content {
+        display: flex !important;
+        flex-direction: column;
+    }
+    .container {
+        margin-top:160%;
+    }
+    .main-content > aside {
+        order: 2;
+    }
+    .main-content > section {
+        order: 1;
+    }
+    
+    .avisos{
+        margin: 30px;
+        /* Alinear al centro todo */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .avisos > .custom-card{
+        width: 50%;
+    }
+}
+@media screen and (min-width: 521px) and (max-width: 600px) {
+    .main-content {
+        display: flex !important;
+        flex-direction: column;
+    }
+    .container {
+        margin-top:140%;
+    }
+    .main-content > aside {
+        order: 2;
+    }
+    .main-content > section {
+        order: 1;
+    }
+    
+    .avisos{
+        margin: 30px;
+        /* Alinear al centro todo */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .avisos > .custom-card{
+        width: 50%;
+    }
+    
 }
 #tituloSiceuc {
 	font-size: 1.3rem;
