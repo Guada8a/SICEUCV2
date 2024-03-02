@@ -9,25 +9,24 @@ jobs:
   send_notification:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Extract commit information
-      run: |
-        COMMIT_MESSAGE=$(git log -1 --pretty=%B)
-        AUTHOR=$(git log -1 --pretty=format:'%an')
-        BRANCH=$(echo ${{ github.ref }} | awk -F'/' '{print $NF}')
+      - name: Extract commit information
+        run: |
+          COMMIT_MESSAGE=$(git log -1 --pretty=%B)
+          AUTHOR=$(git log -1 --pretty=format:'%an')
+          BRANCH=$(echo ${{ github.ref }} | awk -F'/' '{print $NF}')
 
-        if [[ $COMMIT_MESSAGE =~ \#([0-9]+) ]]; then
-          ISSUE_NUMBER="${BASH_REMATCH[1]}"
-          ISSUE_TEXT="<font color=\"#00FF00\"><b>#$ISSUE_NUMBER</b></font>"
-        else
           ISSUE_TEXT=""
-        fi
+          if [[ $COMMIT_MESSAGE =~ \#([0-9]+) ]]; then
+            ISSUE_NUMBER="${BASH_REMATCH[1]}"
+            ISSUE_TEXT="<font color=\"#00FF00\"><b>issue #$ISSUE_NUMBER</b></font>"
+          fi
 
-        MESSAGE="<b><font color=\"#4285F4\">$AUTHOR</font></b> subió cambios en la rama <b>$BRANCH</b> $ISSUE_TEXT"
+          MESSAGE="<font color=\"#0000FF\">$AUTHOR</font> subió cambios en $ISSUE_TEXT en la rama <b>$BRANCH</b>"
 
-        curl -X POST -H 'Content-Type: application/json' -d "{'text': '$MESSAGE'}" "$CHAT_WEBHOOK_URL"
+          curl -X POST -H 'Content-Type: application/json' -d "{'text': '$MESSAGE'}" "$CHAT_WEBHOOK_URL"
 
-      env:
-        CHAT_WEBHOOK_URL: ${{ secrets.CHAT_WEBHOOK_URL }}
+        env:
+          CHAT_WEBHOOK_URL: ${{ secrets.CHAT_WEBHOOK_URL }}
