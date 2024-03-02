@@ -19,4 +19,4 @@ jobs:
       run: |
         curl -X POST -H 'Content-Type: application/json' -d '{
           "text": "Se subieron cambios en la rama $BRANCH_NAME"
-        }' $CHAT_WEBHOOK_URL
+        }' "$CHAT_WEBHOOK_URL"
