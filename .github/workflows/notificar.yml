@@ -18,4 +18,20 @@ jobs:
       run: |
         AUTHOR=$(git log -1 --pretty=format:'%an')
         BRANCH=$(echo ${{ github.ref }} | awk -F'/' '{print $NF}')
-        curl -X POST -H 'Content-Type: application/json' -d "{\"text\": \"$AUTHOR subió cambios en la rama $BRANCH\"}" "$CHAT_WEBHOOK_URL"
+        curl -X POST -H 'Content-Type: application/json' -d '{
+          "cards": [
+            {
+              "sections": [
+                {
+                  "widgets": [
+                    {
+                      "textParagraph": {
+                        "text": "<b><font color=\"#4285F4\">'"$AUTHOR"'</font></b> subió cambios en la rama <b>'"$BRANCH"'</b>"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }' "$CHAT_WEBHOOK_URL"
