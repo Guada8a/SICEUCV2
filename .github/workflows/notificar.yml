@@ -24,9 +24,29 @@ jobs:
             ISSUE_TEXT="<font color=\"#00FF00\"><b>issue #$ISSUE_NUMBER</b></font>"
           fi
 
-          MESSAGE="<font color=\"#0000FF\">$AUTHOR</font> subió cambios en $ISSUE_TEXT en la rama <b>$BRANCH</b>"
+          MESSAGE="<b><font color=\"#0000FF\">$AUTHOR</font></b> subió cambios en $ISSUE_TEXT en la rama <b>$BRANCH</b>"
 
-          curl -X POST -H 'Content-Type: application/json' -d "{'text': '$MESSAGE'}" "$CHAT_WEBHOOK_URL"
+          curl -X POST -H 'Content-Type: application/json' -d '{
+            "cards": [
+              {
+                "header": {
+                  "title": "Notificación de GitHub",
+                  "subtitle": "Cambio en el repositorio"
+                },
+                "sections": [
+                  {
+                    "widgets": [
+                      {
+                        "textParagraph": {
+                          "text": "'"$MESSAGE"'"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }' "$CHAT_WEBHOOK_URL"
 
         env:
           CHAT_WEBHOOK_URL: ${{ secrets.CHAT_WEBHOOK_URL }}
