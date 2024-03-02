@@ -11,20 +11,23 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-      
+
     - name: Extract commit information
       run: |
         COMMIT_MESSAGE=$(git log -1 --pretty=%B)
         AUTHOR=$(git log -1 --pretty=format:'%an')
         BRANCH=$(echo ${{ github.ref }} | awk -F'/' '{print $NF}')
-        
+
         if [[ $COMMIT_MESSAGE =~ \#([0-9]+) ]]; then
           ISSUE_NUMBER="${BASH_REMATCH[1]}"
-          MESSAGE="$AUTHOR subió cambios en el issue #$ISSUE_NUMBER en la rama $BRANCH"
+          ISSUE_TEXT="<font color=\"#00FF00\"><b>#$ISSUE_NUMBER</b></font>"
         else
-          MESSAGE="$AUTHOR subió cambios en la rama $BRANCH"
+          ISSUE_TEXT=""
         fi
-        
+
+        MESSAGE="<b><font color=\"#4285F4\">$AUTHOR</font></b> subió cambios en la rama <b>$BRANCH</b> $ISSUE_TEXT"
+
         curl -X POST -H 'Content-Type: application/json' -d "{'text': '$MESSAGE'}" "$CHAT_WEBHOOK_URL"
+
       env:
         CHAT_WEBHOOK_URL: ${{ secrets.CHAT_WEBHOOK_URL }}
