@@ -17,7 +17,8 @@ jobs:
           COMMIT_MESSAGE=$(git log -1 --pretty=%B)
           AUTHOR=$(git log -1 --pretty=format:'%an')
           BRANCH=$(echo ${{ github.ref }} | awk -F'/' '{print $NF}')
-
+          REPO_NAME=$(echo ${{ github.repository }} | awk -F'/' '{print $NF}')
+          
           ISSUE_TEXT=""
           if [[ $COMMIT_MESSAGE =~ \#([0-9]+) ]]; then
             ISSUE_NUMBER="${BASH_REMATCH[1]}"
@@ -31,7 +32,7 @@ jobs:
               {
                 "header": {
                   "title": "Notificación de GitHub",
-                  "subtitle": "Cambio en el repositorio"
+                  "subtitle": "Cambio en el repositorio: $REPO_NAME",
                 },
                 "sections": [
                   {
