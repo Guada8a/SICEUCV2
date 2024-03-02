@@ -17,6 +17,4 @@ jobs:
         CHAT_WEBHOOK_URL: ${{ secrets.CHAT_WEBHOOK_URL }}
         BRANCH_NAME: ${{ github.ref }}
       run: |
-        curl -X POST -H 'Content-Type: application/json' -d '{
-          "text": "Se subieron cambios en la rama ${BRANCH_NAME}"
-        }' "$CHAT_WEBHOOK_URL"
+        curl -X POST -H 'Content-Type: application/json' -d "{\"text\": \"Se subieron cambios en la rama $BRANCH_NAME\"}" "$CHAT_WEBHOOK_URL"
