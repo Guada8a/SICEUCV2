@@ -21,10 +21,10 @@ jobs:
           ISSUE_TEXT=""
           if [[ $COMMIT_MESSAGE =~ \#([0-9]+) ]]; then
             ISSUE_NUMBER="${BASH_REMATCH[1]}"
-            ISSUE_TEXT="<font color=\"#00FF00\"><b>issue #$ISSUE_NUMBER</b></font>"
+            ISSUE_TEXT="<font color='#00FF00'><b>issue #$ISSUE_NUMBER</b></font>"
           fi
 
-          MESSAGE="<b><font color=\"#0000FF\">$AUTHOR</font></b> subió cambios en $ISSUE_TEXT en la rama <b>$BRANCH</b>"
+          MESSAGE="<b><font color='#0000FF'>$AUTHOR</font></b> subió cambios en el $ISSUE_TEXT en la rama <b>$BRANCH</b>"
 
           curl -X POST -H 'Content-Type: application/json' -d '{
             "cards": [
