@@ -28,21 +28,7 @@ jobs:
         fi
         
         curl -X POST -H 'Content-Type: application/json' -d '{
-          "cards": [
-            {
-              "sections": [
-                {
-                  "widgets": [
-                    {
-                      "textParagraph": {
-                        "text": "'"$MESSAGE"'"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
+          "text": "'"$MESSAGE"'"
         }' "$CHAT_WEBHOOK_URL"
       env:
         CHAT_WEBHOOK_URL: ${{ secrets.CHAT_WEBHOOK_URL }}
