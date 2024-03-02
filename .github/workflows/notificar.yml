@@ -12,23 +12,19 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
       
-    - name: enviar notificación a Google Chat
+    - name: Extract commit information
       run: |
         COMMIT_MESSAGE=$(git log -1 --pretty=%B)
-        if [[ $COMMIT_MESSAGE =~ \#([0-9]+) ]]; then
-          ISSUE_NUMBER="${BASH_REMATCH[1]}"
-        fi
         AUTHOR=$(git log -1 --pretty=format:'%an')
         BRANCH=$(echo ${{ github.ref }} | awk -F'/' '{print $NF}')
         
-        if [ -z "$ISSUE_NUMBER" ]; then
-          MESSAGE=$(printf "<b><font color=\"#4285F4\">%s</font></b> subió cambios en la rama <b>%s</b>" "$AUTHOR" "$BRANCH")
+        if [[ $COMMIT_MESSAGE =~ \#([0-9]+) ]]; then
+          ISSUE_NUMBER="${BASH_REMATCH[1]}"
+          MESSAGE="$AUTHOR subió cambios en el issue #$ISSUE_NUMBER en la rama $BRANCH"
         else
-          MESSAGE=$(printf "<b><font color=\"#4285F4\">%s</font></b> subió cambios en el issue <b>#%s</b> en la rama <b>%s</b>" "$AUTHOR" "$ISSUE_NUMBER" "$BRANCH")
+          MESSAGE="$AUTHOR subió cambios en la rama $BRANCH"
         fi
         
-        curl -X POST -H 'Content-Type: application/json' -d '{
-          "text": "'"$MESSAGE"'"
-        }' "$CHAT_WEBHOOK_URL"
+        curl -X POST -H 'Content-Type: application/json' -d "{'text': '$MESSAGE'}" "$CHAT_WEBHOOK_URL"
       env:
         CHAT_WEBHOOK_URL: ${{ secrets.CHAT_WEBHOOK_URL }}
