@@ -12,12 +12,21 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
       
-    - name: Send Google Chat message
-      env:
-        CHAT_WEBHOOK_URL: ${{ secrets.CHAT_WEBHOOK_URL }}
+    - name: Extract commit information
       run: |
+        COMMIT_MESSAGE=$(git log -1 --pretty=%B)
+        if [[ $COMMIT_MESSAGE =~ \#([0-9]+) ]]; then
+          ISSUE_NUMBER="${BASH_REMATCH[1]}"
+        fi
         AUTHOR=$(git log -1 --pretty=format:'%an')
         BRANCH=$(echo ${{ github.ref }} | awk -F'/' '{print $NF}')
+        
+        if [ -z "$ISSUE_NUMBER" ]; then
+          MESSAGE="<b><font color=\"#4285F4\">$AUTHOR</font></b> subió cambios en la rama <b>$BRANCH</b>"
+        else
+          MESSAGE="<b><font color=\"#4285F4\">$AUTHOR</font></b> subió cambios en el issue <b>#${ISSUE_NUMBER}</b> en la rama <b>$BRANCH</b>"
+        fi
+        
         curl -X POST -H 'Content-Type: application/json' -d '{
           "cards": [
             {
@@ -26,7 +35,7 @@ jobs:
                   "widgets": [
                     {
                       "textParagraph": {
-                        "text": "<b><font color=\"#4285F4\">'"$AUTHOR"'</font></b> subió cambios en la rama <b>'"$BRANCH"'</b>"
+                        "text": "'"$MESSAGE"'"
                       }
                     }
                   ]
@@ -35,3 +44,5 @@ jobs:
             }
           ]
         }' "$CHAT_WEBHOOK_URL"
+      env:
+        CHAT_WEBHOOK_URL: ${{ secrets.CHAT_WEBHOOK_URL }}
