@@ -1,0 +1,22 @@
+name: Google Chat Notification
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  send_notification:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Send Google Chat message
+      env:
+        CHAT_WEBHOOK_URL: ${{ secrets.CHAT_WEBHOOK_URL }}
+        BRANCH_NAME: ${{ github.ref }}
+      run: |
+        curl -X POST -H 'Content-Type: application/json' -d '{
+          "text": "Se subieron cambios en la rama $BRANCH_NAME"
+        }' $CHAT_WEBHOOK_URL
